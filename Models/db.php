@@ -10,10 +10,22 @@
     $email_2 ->invia();
     $email_2 ->inoltra();
     $email_2 ->stampa();
+
     $email =[$email_1,$email_2];
 
+    $messaggio_1 = new Messaggi ('Denis','Superman','criptonite','sempre debole eh ?',false,false);
+    $messaggio_1->risposta();
+    $messaggio_1->invia();
+    $messaggio_2 = new Messaggi ('Denis','Thor','Asgard','senza casa ?',false,true);
+    $messaggio_2->risposta();
+    $messaggio_2->invia();
+    $messaggio_3 = new Messaggi ('Denis','Hulk','raggi gamma','spacca tutto',true,false);
+    $messaggio_3->risposta();
+    $messaggio_3->invia();
 
-    
+    $messaggi =[$messaggio_1,$messaggio_2,$messaggio_3]
+
+
 // $messaggi =[
 
 // ];

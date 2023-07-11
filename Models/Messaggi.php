@@ -3,8 +3,8 @@ class Messaggi extends SistemiComunicazione {
     private $notificaLettura;
     private $rispostaAccettata;
   
-    public function __construct($mittente, $destinataro, $titolo, $messaggio, $notificaLettura, $rispostaAccettata) {
-      parent::__construct($mittente, $destinatari, $titolo, $messaggio);
+    public function __construct($mittente, $destinatario, $titolo, $messaggio, $notificaLettura, $rispostaAccettata) {
+      parent::__construct($mittente, $destinatario, $titolo, $messaggio);
       $this->notificaLettura = $notificaLettura;
       $this->rispostaAccettata = $rispostaAccettata;
     }
@@ -22,7 +22,7 @@ class Messaggi extends SistemiComunicazione {
     }
 
     public function invia(){
-        echo "Messaggio inviato";
+        return "Messaggio inviato";
     }
 }
 ?>

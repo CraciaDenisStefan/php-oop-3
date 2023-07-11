@@ -34,6 +34,21 @@ require_once __DIR__.'/Models/db.php';
         <hr>
     <?php }?>
     </ul>
+
+    <ul class="list-unstyled">
+    <h3>Messaggi:</h3>
+    <?php foreach ($messaggi as $messaggio) {?>
+        <li>Mittente: <?php echo $messaggio->getMittente() ?></li>
+        <li>Destinatario: <?php echo $messaggio->getDestinatario() ?></li>
+        <li>Titolo: <?php echo $messaggio->getTitolo() ?></li>
+        <li>Messaggio: <?php echo $messaggio->getMessaggio() ?></li>
+        <li>Consegnato: <?php echo $messaggio->getNotificaLettura() ? 'Sì' : 'No'; ?></li>
+        <li>Consegnato: <?php echo $messaggio->getRispostaAccettata() ? 'Sì' : 'No'; ?></li>
+        <li><?php echo $messaggio->risposta() ?></li>
+        <li><?php echo $messaggio->invia() ?></li>
+        <hr>
+    <?php }?>
+    </ul>
   </div>
    
 </body>

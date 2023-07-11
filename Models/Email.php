@@ -1,12 +1,12 @@
 <?php
 class Email extends SistemiComunicazione {
-    private $allegati;
     private $notificaConsegna;
+    private $allegati;
   
-    public function __construct($mittente, $destinatari, $titolo, $messaggio, $allegati, $notificaConsegna) {
+    public function __construct( string $mittente, string $destinatari, string $titolo, string $messaggio, string $notificaConsegna, Allegati $allegati) {
       parent::__construct($mittente, $destinatari, $titolo, $messaggio);
-      $this->allegati = $allegati;
       $this->notificaConsegna = $notificaConsegna;
+      $this->allegati = $allegati;
     }
 
     public function getAllegati(){
@@ -16,7 +16,7 @@ class Email extends SistemiComunicazione {
     public function getNotificaConsegna(){
         return $this->notificaConsegna;
     }
-  
+
 
     public function inoltra(){
         return "Email inoltrata";

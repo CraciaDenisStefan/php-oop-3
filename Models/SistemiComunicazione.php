@@ -16,6 +16,10 @@ class SistemiComunicazione {
         return $this->mittente;
     }
 
+    public function getTitolo(){
+      return $this->titolo;
+  }
+
     public function getDestinatario(){
         return $this->destinatario;
     }

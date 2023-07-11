@@ -2,6 +2,7 @@
 class Email extends SistemiComunicazione {
     private $notificaConsegna;
     private $allegati;
+    static public $coloreLed = 'Yellow';
   
     public function __construct( string $mittente, string $destinatari, string $titolo, string $messaggio, string $notificaConsegna, Allegati $allegati) {
       parent::__construct($mittente, $destinatari, $titolo, $messaggio);

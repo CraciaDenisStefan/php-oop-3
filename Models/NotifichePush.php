@@ -2,6 +2,7 @@
 class NotifichePush extends SistemiComunicazione {
     private $icona;
     private $visibile;
+    static public $coloreLed = 'White';
   
     public function __construct($mittente, $destinatari, $titolo, $messaggio, $icona, $visibile) {
       parent::__construct($mittente, $destinatari, $titolo, $messaggio);

@@ -2,6 +2,7 @@
 class Messaggi extends SistemiComunicazione {
     private $notificaLettura;
     private $rispostaAccettata;
+    static public $coloreLed = 'Green';
   
     public function __construct($mittente, $destinatario, $titolo, $messaggio, $notificaLettura, $rispostaAccettata) {
       parent::__construct($mittente, $destinatario, $titolo, $messaggio);

@@ -17,11 +17,14 @@ require_once __DIR__.'/Models/db.php';
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
     <title>Document</title>
 </head>
-<body>
+<body class="bg-primary-subtle">
   <div class="container my-5">
+  <h1 class="text-danger text-center my-5">Suoneria: <?php echo SistemiComunicazione::$suoneria ?></h1>
+
   <ul class="list-unstyled">
-    <h3>Email:</h3>
+    <h3 class="text-warning-emphasis">Email:</h3>
     <?php foreach ($email as $mail) {?>
+        <h4 class=" text-warning">LED: <?php echo Email::$coloreLed ?></h4>
         <li>Mittente: <?php echo $mail->getMittente() ?></li>
         <li>Destinatario: <?php echo $mail->getDestinatario() ?></li>
         <li>Titolo: <?php echo $mail->getTitolo() ?></li>
@@ -34,10 +37,11 @@ require_once __DIR__.'/Models/db.php';
         <hr>
     <?php }?>
     </ul>
-
+<hr>
     <ul class="list-unstyled">
-    <h3>Messaggi:</h3>
+    <h3 class="text-warning-emphasis">Messaggi:</h3>
     <?php foreach ($messaggi as $messaggio) {?>
+        <h4 class="text-success">LED: <?php echo Messaggi::$coloreLed ?></h4>
         <li>Mittente: <?php echo $messaggio->getMittente() ?></li>
         <li>Destinatario: <?php echo $messaggio->getDestinatario() ?></li>
         <li>Titolo: <?php echo $messaggio->getTitolo() ?></li>
@@ -49,10 +53,11 @@ require_once __DIR__.'/Models/db.php';
         <hr>
     <?php }?>
     </ul>
-
+<hr>
     <ul class="list-unstyled">
-    <h3>Notifiche Push:</h3>
+    <h3 class="text-warning-emphasis">Notifiche Push:</h3>
     <?php foreach ($notifiche as $notifica) {?>
+        <h4 class="text-white">LED: <?php echo NotifichePush::$coloreLed ?></h4>
         <li>Mittente: <?php echo $notifica->getMittente() ?></li>
         <li>Destinatario: <?php echo $notifica->getDestinatario() ?></li>
         <li>Titolo: <?php echo $notifica->getTitolo() ?></li>

@@ -4,7 +4,7 @@ class Messaggi extends SistemiComunicazione {
     private $rispostaAccettata;
     static public $coloreLed = 'Green';
   
-    public function __construct($mittente, $destinatario, $titolo, $messaggio, $notificaLettura, $rispostaAccettata) {
+    public function __construct( string $mittente, string $destinatario, string $titolo, string $messaggio, bool $notificaLettura, bool $rispostaAccettata) {
       parent::__construct($mittente, $destinatario, $titolo, $messaggio);
       $this->notificaLettura = $notificaLettura;
       $this->rispostaAccettata = $rispostaAccettata;

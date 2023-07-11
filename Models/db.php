@@ -29,7 +29,7 @@
     $notifiche_1 = new NotifichePush ('Thor','Denis','Asgard','spiritoso','wp',true);
     $notifiche_1->click();
     $notifiche_1->invia();
-    $notifiche_2 = new NotifichePush ('Hulk','Hulk','raggi gamma','spacco tutto','telegram',false);
+    $notifiche_2 = new NotifichePush ('Hulk','Denis','raggi gamma','spacco tutto','telegram',false);
     $notifiche_2->click();
     $notifiche_2->invia();
 

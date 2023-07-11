@@ -4,7 +4,7 @@ class Email extends SistemiComunicazione {
     private $allegati;
     static public $coloreLed = 'Yellow';
   
-    public function __construct( string $mittente, string $destinatari, string $titolo, string $messaggio, string $notificaConsegna, Allegati $allegati) {
+    public function __construct( string $mittente, string $destinatari, string $titolo, string $messaggio, bool $notificaConsegna, Allegati $allegati) {
       parent::__construct($mittente, $destinatari, $titolo, $messaggio);
       $this->notificaConsegna = $notificaConsegna;
       $this->allegati = $allegati;

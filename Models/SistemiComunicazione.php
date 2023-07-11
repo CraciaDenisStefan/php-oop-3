@@ -6,7 +6,7 @@ class SistemiComunicazione {
     private $messaggio;
     static public $suoneria = 'DRIIIN';
   
-    public function __construct($mittente, $destinatario, $titolo, $messaggio) {
+    public function __construct( string $mittente, string  $destinatario, string  $titolo, string  $messaggio) {
       $this->mittente = $mittente;
       $this->destinatario = $destinatario;
       $this->titolo = $titolo;

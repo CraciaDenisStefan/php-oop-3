@@ -42,10 +42,25 @@ require_once __DIR__.'/Models/db.php';
         <li>Destinatario: <?php echo $messaggio->getDestinatario() ?></li>
         <li>Titolo: <?php echo $messaggio->getTitolo() ?></li>
         <li>Messaggio: <?php echo $messaggio->getMessaggio() ?></li>
-        <li>Consegnato: <?php echo $messaggio->getNotificaLettura() ? 'Sì' : 'No'; ?></li>
-        <li>Consegnato: <?php echo $messaggio->getRispostaAccettata() ? 'Sì' : 'No'; ?></li>
+        <li>Letto: <?php echo $messaggio->getNotificaLettura() ? 'Sì' : 'No'; ?></li>
+        <li>Risposta Accettata: <?php echo $messaggio->getRispostaAccettata() ? 'Sì' : 'No'; ?></li>
         <li><?php echo $messaggio->risposta() ?></li>
         <li><?php echo $messaggio->invia() ?></li>
+        <hr>
+    <?php }?>
+    </ul>
+
+    <ul class="list-unstyled">
+    <h3>Notifiche Push:</h3>
+    <?php foreach ($notifiche as $notifica) {?>
+        <li>Mittente: <?php echo $notifica->getMittente() ?></li>
+        <li>Destinatario: <?php echo $notifica->getDestinatario() ?></li>
+        <li>Titolo: <?php echo $notifica->getTitolo() ?></li>
+        <li>Messaggio: <?php echo $notifica->getMessaggio() ?></li>
+        <li>Da: <?php echo $notifica->getIcona() ?></li>
+        <li>Visualizzato: <?php echo $notifica->getVisibile() ? 'Sì' : 'No'; ?></li>
+        <li><?php echo $notifica->click() ?></li>
+        <li><?php echo $notifica->invia() ?></li>
         <hr>
     <?php }?>
     </ul>

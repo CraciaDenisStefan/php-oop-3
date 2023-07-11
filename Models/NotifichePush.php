@@ -9,6 +9,14 @@ class NotifichePush extends SistemiComunicazione {
       $this->visibile = $visibile;
     }
 
+    public function getIcona(){
+      return $this->icona;
+  }
+
+  public function getVisibile(){
+      return $this->visibile;
+  }
+
     public function click(){
         return "Apro la notifica push";
     }

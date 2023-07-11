@@ -23,13 +23,17 @@
     $messaggio_3->risposta();
     $messaggio_3->invia();
 
-    $messaggi =[$messaggio_1,$messaggio_2,$messaggio_3]
+    $messaggi =[$messaggio_1,$messaggio_2,$messaggio_3];
 
 
-// $messaggi =[
+    $notifiche_1 = new NotifichePush ('Thor','Denis','Asgard','spiritoso','wp',true);
+    $notifiche_1->click();
+    $notifiche_1->invia();
+    $notifiche_2 = new NotifichePush ('Hulk','Hulk','raggi gamma','spacco tutto','telegram',false);
+    $notifiche_2->click();
+    $notifiche_2->invia();
 
-// ];
-// $notifiche=[
+    $notifiche =[$notifiche_1,$notifiche_2]
 
-// ]
+
 ?>
